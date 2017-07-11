@@ -1,7 +1,7 @@
 {
-  "name": "react-express-lite",
-  "version": "0.0.0",
-  "private": true,
+  "name": "react-express-starter",
+  "version": "1.0.0",
+  "private": false,
   "scripts": {
     "start": "node ./API/server",
     "dev": "./node_modules/.bin/webpack -d --watch --config ./webpack.config.js",
