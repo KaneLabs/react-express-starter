@@ -2,6 +2,11 @@
   "name": "react-express-starter",
   "version": "1.0.0",
   "private": false,
+  "repository" :
+  {
+    "type" : "git",
+    "url" : "https://github.com/kanelabs/react-express-starter.git"
+  },
   "scripts": {
     "start": "node ./API/server",
     "dev": "./node_modules/.bin/webpack -d --watch --config ./webpack.config.js",
