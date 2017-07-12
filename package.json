@@ -1,19 +1,52 @@
 {
-  "name": "react-express-lite",
+  "name": "sizzler",
   "version": "0.0.0",
   "private": true,
+  "main": "servers/server.js",
+  "license": "ISC",
   "scripts": {
-    "start": "node ./API/server",
+    "knex": "knex",
+    "heroku-postbuild": "knex migrate:rollback --knexfile servers/knexfile.js; knex migrate:latest --knexfile servers/knexfile.js; knex seed:run --knexfile servers/knexfile.js;",
+    "start": "yarn build; gulp",
+    "test": "mocha",
+    "nodemon": "node servers/servers.js",
     "dev": "./node_modules/.bin/webpack -d --watch --config ./webpack.config.js",
     "build": "./node_modules/.bin/webpack -p --config ./webpack.config.js"
   },
+  "keywords": [],
+  "author": "",
+  "description": "",
+  "homepage": "https://github.com/MATTALUI/sizzler#readme",
+  "bugs": {
+    "url": "https://github.com/MATTALUI/sizzler/issues"
+  },
   "dependencies": {
-    "express": "~4.13.1",
+    "angular": "^1.6.0",
+    "angular-moment": "^1.0.1",
+    "angular-ui-router": "1.0.0-beta.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "bootstrap": "^3.3.7",
+    "browser-sync": "^2.18.12",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.3",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "jquery": "^3.1.1",
     "knex": "^0.13.0",
-    "morgan": "~1.6.1",
+    "materialize-css": "^0.98.2",
+    "moment": "^2.18.1",
+    "morgan": "^1.8.2",
     "pg": "^6.4.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
+  },
+  "engines": {
+    "node": "v7.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MATTALUI/sizzler.git"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
@@ -21,9 +54,14 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "chai": "^3.5.0",
     "css-loader": "^0.28.4",
+    "express": "^4.15.3",
+    "mocha": "^3.2.0",
     "postcss-loader": "^2.0.6",
+    "react-express-starter": "^1.0.2",
     "style-loader": "^0.18.2",
+    "supertest": "^2.0.1",
     "webpack": "^3.0.0"
   }
 }
