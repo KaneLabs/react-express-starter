@@ -2,7 +2,10 @@ import React from 'react';
 
 const Splash = () => {
   return (
-    <h1>Hello World</h1>
+    <main>
+      <h1>Sizzler</h1>
+      <img src="./bbq.svg"/>
+    </main>
   )
 }
 

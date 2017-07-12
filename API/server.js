@@ -9,7 +9,7 @@ var app = express();
 app.use(logger('dev'));
 
 app.use(express.static(path.join(__dirname)));
-
+app.use(express.static(path.join(__dirname, `../App`)));
 const indexHTML = `
   <!DOCTYPE html>
   <html>
