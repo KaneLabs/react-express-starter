@@ -4,7 +4,7 @@ import './index.css'; // styling for body
 import Splash from './splash'
 
 function App () {
-  return <h1>something</h1>
+  return <Splash />
 
 }
 
