@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 const APP_DIR = path.resolve(__dirname, 'App');
-const BUILD_DIR = path.resolve(__dirname, 'API');
+const BUILD_DIR = path.resolve(__dirname, 'servers');
 
 const config = {
   entry: APP_DIR + '/index.jsx',
@@ -12,8 +12,7 @@ const config = {
     filename: 'build.js'
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         exclude: path.resolve(__dirname, 'node_modules'),
