@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Splash () => {
+const Splash = () => {
   return (
     <h1>Hello World</h1>
   )
